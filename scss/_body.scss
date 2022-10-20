@@ -28,7 +28,7 @@ body {
         object-fit: cover;
     }
     a {
-        text-decoration: none;
+        @include estilosEnlaces;
     }
 }
 

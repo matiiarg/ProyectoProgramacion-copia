@@ -1,3 +1,4 @@
+@import "./variables";
 @import "./mixins";
 @import "./body";
 @import "./header";
@@ -6,4 +7,44 @@
 @import "./main";
 @import "./footer";
 @import "./contacto";
-@import "./tabla"
+@import "./tabla";
+
+/* MEDIA QUIRES */
+
+@media (max-width: 1200px) {
+    body {
+        font-size: 14px;
+    
+    }
+}
+
+
+@media (max-width: 768px) {
+    .articulo.destacado {
+        display: grid;
+        grid-template-columns: 1fr;
+
+}
+    .articulo.destacado .contenedor-thumbnail {
+        height: 18em; 
+    }
+    .contenedor {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(5, auto);
+        grid-template-areas:
+            'header			header   	header'
+            'destacado		destacado 	destacado'
+            'contenido		contenido 	contenido'
+            'aside		    aside 	        aside'
+            'footer	 		footer 		footer';
+    }
+}
+
+
+@media (max-width: 468px) {
+    body {
+    font-size: 14px;
+    }
+
+
+}

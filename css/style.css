@@ -30,7 +30,21 @@ body img {
      object-fit: cover;
 }
 body a {
+  padding: 10px;
+  color: #000;
+  display: block;
   text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 400;
+  width: 100%;
+  text-align: center;
+  -webkit-transition: 0.2s ease all;
+  transition: 0.2s ease all;
+  font-size: 16px;
+}
+body a:hover {
+  background: #000;
+  color: #fff;
 }
 
 /* ---------- HEADER ----------*/
@@ -142,7 +156,7 @@ body a {
   -ms-grid-column: 1;
   -ms-grid-column-span: 5;
   grid-area: destacado;
-  color: white;
+  color: #fff;
   background-color: #000;
   -webkit-box-shadow: 0px 0px 70px rgba(102, 102, 102, 0.2);
           box-shadow: 0px 0px 70px rgba(102, 102, 102, 0.2);
@@ -176,7 +190,7 @@ body a {
   cursor: pointer;
   display: inline-block;
   padding: 0.625em;
-  background-color: #262626;
+  background-color: #000;
   font-size: 1em;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -184,7 +198,7 @@ body a {
       align-self: flex-end;
 }
 .articulo.destacado .btn-link:hover {
-  background: #000;
+  background: #868686;
   text-decoration: none;
 }
 
@@ -197,7 +211,7 @@ body a {
   min-height: 100px;
   grid-area: aside;
   background: #000;
-  color: #868b8d;
+  color: #868686;
   -webkit-box-shadow: 0px 0px 70px rgba(102, 102, 102, 0.2);
           box-shadow: 0px 0px 70px rgba(102, 102, 102, 0.2);
 }
@@ -226,7 +240,7 @@ body a {
   text-transform: uppercase;
 }
 .sidebar .menu a:hover {
-  background: #262626;
+  background: #868686;
 }
 
 /*---------- CONTENIDO ----------*/
@@ -247,7 +261,7 @@ body a {
   -ms-grid-row: 7;
   -ms-grid-column: 1;
   -ms-grid-column-span: 5;
-  background: rgb(201, 21, 21);
+  background: rgb(199, 18, 18);
   font-size: 20px;
   grid-area: footer;
   padding: 25px;
@@ -258,7 +272,7 @@ body a {
 
 /* ESTILOS CONTACTO */
 #contacto {
-  background: radial-gradient(red, white);
+  background: radial-gradient(rgb(104, 103, 103), white);
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: auto 100px;
@@ -293,19 +307,98 @@ body a {
 #contacto .redes-sociales {
   -ms-grid-column-align: center;
       justify-self: center;
-  padding: 10px 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0px;
 }
 #contacto .redes-sociales a {
-  color: white;
+  padding: 10px;
+  color: #000;
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 400;
+  width: 100%;
+  text-align: center;
+  -webkit-transition: 0.2s ease all;
+  transition: 0.2s ease all;
+  font-size: 16px;
+}
+#contacto .redes-sociales a:hover {
+  background: #000;
+  color: #fff;
 }
 #contacto form input[type=submit] {
-  background-color: rgb(255, 0, 0);
+  background-color: rgb(199, 18, 18);
   font-weight: bold;
   font-size: 28px;
 }
 
 /* ESTILOS TABLA-FUTBOL */
 table {
-  background-color: rgb(0, 0, 0);
-  color: white;
+  background-color: #000;
+  color: #fff;
+}
+
+/* MEDIA QUIRES */
+@media (max-width: 1200px) {
+  body {
+    font-size: 14px;
+  }
+}
+@media (max-width: 768px) {
+  .articulo.destacado {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+
+  .articulo.destacado .contenedor-thumbnail {
+    height: 18em;
+  }
+
+  .contenedor {
+    -ms-grid-columns: (1fr)[3];
+    grid-template-columns: repeat(3, 1fr);
+    -ms-grid-rows: (auto)[5];
+    grid-template-rows: repeat(5, auto);
+        grid-template-areas: "header			header   	header" "destacado		destacado 	destacado" "contenido		contenido 	contenido" "aside		    aside 	        aside" "footer	 		footer 		footer";
+  }
+
+  .contenedor > .header {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+  }
+
+  .contenedor > .articulo.destacado {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+  }
+
+  .contenedor > .sidebar {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+  }
+
+  .contenedor > .contenido {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+  }
+
+  .contenedor > .footer {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+  }
+}
+@media (max-width: 468px) {
+  body {
+    font-size: 14px;
+  }
 }

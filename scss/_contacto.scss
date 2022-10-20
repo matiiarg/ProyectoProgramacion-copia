@@ -2,7 +2,7 @@
 
 
 #contacto {
-    background: radial-gradient(red, white);
+    background: radial-gradient(rgb(104, 103, 103), white);
     display: grid;
     grid-template: auto 100px / 700px;
     justify-content: center;
@@ -26,13 +26,14 @@
     }
     .redes-sociales {
         justify-self: center;
-        padding: 10px 0;
+        align-items: center;
+        padding: 0px;
         a {
-            color: white;
+            @include estilosEnlaces;
         }
     }
     form input[type="submit"] {
-        background-color: rgb(255, 0, 0);
+        background-color: rgb(199, 18, 18);
         font-weight: bold;
         font-size: 28px;
     }

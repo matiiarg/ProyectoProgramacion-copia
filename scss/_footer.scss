@@ -1,7 +1,7 @@
 /*---------- FOOTER ----------*/
 .contenedor {
     .footer {
-        background: rgb(201, 21, 21);
+        background:map-get($paleta-colores,"rojo");
         font-size: 20px;
         grid-area: footer;
         padding: 25px;

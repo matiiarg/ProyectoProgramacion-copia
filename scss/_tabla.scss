@@ -1,5 +1,5 @@
 /* ESTILOS TABLA-FUTBOL */
 table {
-    background-color: rgb(0, 0, 0);
-    color: white;
+    background-color:map-get($paleta-colores,"negro");
+    color:map-get($paleta-colores,"blanco");
 }
